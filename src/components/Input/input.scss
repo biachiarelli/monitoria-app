@@ -8,7 +8,9 @@
         color: $gray-4;
     }
 
-    input {
+    input,
+    input[type="date"] {
+        font-family: "Manrope";
         padding: 12px 0;
         width: 100%;
         text-indent: 16px;
@@ -22,5 +24,14 @@
             color: $gray-3;
             font-size: 16px;
         }
+    }
+
+    input[type="date"] {
+        text-indent: 8px;
+
+        &::-webkit-calendar-picker-indicator {
+            padding-right: 16px;
+        }
+
     }
 }

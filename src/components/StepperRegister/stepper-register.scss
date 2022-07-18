@@ -1,0 +1,59 @@
+.StepperRegister {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+
+    &-line {
+        height: 8px;
+        position: absolute;
+        border: none;
+        top: 16px;
+        z-index: 0;
+
+        &.background {
+            width: 100%;
+            background-color: $gray-2;
+        }
+
+        &.active {
+            background-color: $primary-color;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 8px;
+        align-items: center;
+
+        &__number {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 56px;
+            background-color: $gray-2;
+            color: $gray-4;
+            width: 56px;
+            height: 56px;
+            text-align: center;
+            border-radius: 100%;
+            z-index: 1;
+
+        }
+
+        &__label {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $gray-4;
+            text-align: center;
+        }
+
+        &.active {
+            .StepperRegister-item__number {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+}

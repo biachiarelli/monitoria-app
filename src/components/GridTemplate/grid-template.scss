@@ -1,0 +1,22 @@
+.GridTemplate {
+    display: grid;
+    grid-template-areas:
+      "navbar header"
+      "navbar main";
+      
+    grid-template-columns: 324px auto;
+    min-height: 100vh;
+
+    &-navbar {
+        grid-area: navbar;
+    }
+
+    &-header {
+        grid-area: header;
+
+    }
+    &-main {
+        grid-area: main;
+
+    }
+}

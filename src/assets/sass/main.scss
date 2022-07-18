@@ -3,8 +3,14 @@
 @import "./global";
 
 //components
-@import "../../components/Input/input"; 
-@import "../../components/Button/button"; 
+@import "../../components/Input/input.scss"; 
+@import "../../components/Button/button.scss"; 
+@import "../../components/StepperRegister/stepper-register.scss"; 
+@import "../../components/Header/header.scss"; 
+@import "../../components/Navbar/navbar.scss"; 
+@import "../../components/GridTemplate/grid-template"; 
 
 //page
-@import "../../pages/Login/login"; 
+@import "../../pages/Login/login.scss"; 
+@import "../../pages/RegisterStudant/register-studant.scss"; 
+@import "../../pages/Home/home.scss"; 

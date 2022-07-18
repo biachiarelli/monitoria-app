@@ -2,8 +2,11 @@ import imgLogo from '../../assets/img/logo.svg';
 import imgLogin from '../../assets/img/login-img.svg';
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='Login'>
       <div className="Login-wrapper container">
@@ -27,13 +30,13 @@ const Login = () => {
                 <span className='Login-link'>Esqueci minha senha</span>
               </div>
               
-              <Button type="submit" label="Entrar" buttonStyle="primary" />
+              <Button type="submit" label="Entrar" buttonStyle="primary" onClick={() => navigate("/home")} />
           </form>
           <div className="Login-footer">
             <div className="Login-text-line"><hr />Primeiro acesso?<hr /></div>
             <div className="Login-buttons">
-              <Button label="Sou aluno"  buttonStyle="primary"/>
-              <Button label="Sou monitor" buttonStyle="secondary"/>
+              <Button label="Sou aluno"  buttonStyle="primary" onClick={() => navigate("/cadastro-aluno")} />
+              <Button label="Sou monitor" buttonStyle="secondary" onClick={() => navigate("/cadastro-aluno")}/>
             </div>
           </div>
         </div>
