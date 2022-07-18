@@ -5,6 +5,7 @@
       "navbar main";
       
     grid-template-columns: 324px auto;
+    grid-template-rows: 80px auto;
     min-height: 100vh;
 
     &-navbar {
@@ -17,6 +18,7 @@
     }
     &-main {
         grid-area: main;
+        margin: 32px 40px;
 
     }
 }

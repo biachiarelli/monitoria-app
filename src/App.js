@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Login";
 import RegisterStudant from "./pages/RegisterStudant";
-import Home from "./components/GridTemplate";
+import Home from "./pages/Home";
 
 
 function App() {

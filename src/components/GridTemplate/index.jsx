@@ -27,7 +27,7 @@ const GridTemplate = (props) => {
     }
 
   return (
-    <div className='GridTemplate'>
+    <div className='GridTemplate container'>
         <div className='GridTemplate-navbar'>
             <Navbar  menu={menu} />
         </div>
