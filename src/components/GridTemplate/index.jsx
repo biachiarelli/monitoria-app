@@ -7,27 +7,28 @@ const GridTemplate = (props) => {
     const menu = [
         {
             label: "Minhas monitorias",
-            link: ""
+            link: "/home"
         },{
             label: "Meus horários disponíveis",
-            link: ""
+            link: "/horarios-disponiveis"
         },{
             label: "Buscar monitores",
-            link: ""
+            link: "/buscar-monitor"
         },{
             label: "Preferências de recomendação",
-            link: ""
+            link: "/preferencias"
         },
     ]    
 
     const info = {
         name: "Maria Silva",
         type: "Aluno",
-        img: profileImg
+        img: profileImg,
+        link: "/perfil"
     }
 
   return (
-    <div className='GridTemplate container'>
+    <div className='GridTemplate'>
         <div className='GridTemplate-navbar'>
             <Navbar  menu={menu} />
         </div>
