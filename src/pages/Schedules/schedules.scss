@@ -1,8 +1,64 @@
 .Schedules {
+    display: grid;
+    grid-gap: 24px;
+
     &-title {
         font-size: 48px;
         line-height: 66px;
         color: $gray-4;
         font-weight: 700;
+        margin: 0;
     }
+
+    &-label {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__text {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: $gray-4;
+        }
+
+        &__itens {
+            display: flex;
+            grid-gap: 24px;
+        }
+
+        &__item {
+            font-size: 16px;
+            line-height: 22px;
+            color: $gray-4;
+            display: flex;
+            grid-gap: 4px;
+            align-items: center;
+            justify-items: center;
+
+            .square {
+                width: 18px;
+                height: 18px;
+                border-radius: 2px;
+
+                &.gray {
+                    background: $gray-2;
+                    border: 1px solid #E8E8E8;
+                }
+
+                &.light {
+                    background: $primary-color;
+                    opacity: 24%;
+
+                }
+
+                &.dark {
+                    background: $primary-color;
+                }
+            }
+            
+        }
+    }
+    
 }

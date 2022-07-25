@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import StepperRegister from "../../components/StepperRegister";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
+import RadioButton from '../../components/RadioButton';
 
 const RegisterStudant = () => {
   const navigate = useNavigate();
@@ -111,8 +112,10 @@ const RegisterStudant = () => {
               options={course}
               />
 
-            <div>
-              <label>Estudante cotista? </label>
+            <div  className='Register-form__label'>
+              <label className='Register-form__label'>Estudante cotista? </label>
+              <RadioButton label="Sim" />
+              <RadioButton label="Não" />
             </div>
             
             <Input
