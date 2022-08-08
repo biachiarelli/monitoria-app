@@ -15,6 +15,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1226px;
 
         &__text {
             font-weight: 700;
@@ -58,6 +59,38 @@
                 }
             }
             
+        }
+    }
+
+    &-table {
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid $gray-1;
+            border-collapse: collapse;
+          }
+
+        th {
+            height: 84px;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: $gray-4;
+        }
+
+        td {
+            width: 172px;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 22px;            
+            text-align: center;
+            color: $gray-4;
+            height: 40px;
         }
     }
     

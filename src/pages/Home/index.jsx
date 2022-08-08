@@ -1,6 +1,9 @@
 import GridTemplate from "../../components/GridTemplate";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+  
   const info = {
     name: "Maria Silva"
   }
@@ -12,10 +15,10 @@ const Home = () => {
           <h2 className="Home-subtitle">Por enquanto você não tem nenhum horário de monitoria</h2>
         </div>
         <div className="Home-options">
-          <div className="Home-options__card color">
+          <div className="Home-options__card color"  onClick={() => navigate("/horarios-disponiveis")}>
             <span className="bold">Informar</span> meus horários 
           </div>
-          <div className="Home-options__card">
+          <div className="Home-options__card"  onClick={() => navigate("/buscar-monitor")}>
             <span className="bold">Buscar</span> horários de monitores
           </div>
         </div>

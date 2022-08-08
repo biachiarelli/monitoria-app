@@ -5,11 +5,11 @@ const Header = (props) => {
   
   return (
     <div className='Header'>
-        <div className='Header-info'  onClick={() => navigate(props.info.link)} >
+        <div className='Header-info'  onClick={() => navigate('/perfil')} >
             <span>{props.info.name}</span>
             <span className='bold'>{props.info.type}</span>
         </div>
-        <img src={props.info.img} alt="Imagem perfil" className='Header-img' />
+        <img src={props.info.img} alt="Imagem perfil" className='Header-img'  onClick={() => navigate('/perfil')} />
     </div>
   );
 };

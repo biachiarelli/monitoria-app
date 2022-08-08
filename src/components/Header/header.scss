@@ -20,11 +20,14 @@
         .bold {
             font-weight: bold;
         }
+        cursor: pointer;
 
     }
 
     &-img {
         height: 54px;
         width: auto;
+        border-radius: 100%;
+        cursor: pointer;
     }
 }

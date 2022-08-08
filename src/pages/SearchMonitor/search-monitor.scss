@@ -1,9 +1,72 @@
 .SearchMonitor {
+    display: grid;
+    grid-gap: 32px;
+
+    &-header {
+        display: grid;
+        grid-gap: 16px;
+    }
+
     &-title {
         font-size: 48px;
         line-height: 66px;
         color: $gray-4;
         font-weight: 700;
         margin: 0;
+    }
+
+    &-subtitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__text {
+            color: $gray-4;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        button {
+            max-width: 360px;
+        }
+    }
+
+    &-cards {
+        display: flex;
+        gap: 40px;
+
+        .card {
+            width: 256px;
+            background: $white;
+            box-shadow: 0px 4px 28px rgba(171, 171, 171, 0.25);
+            border-radius: 4px;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+
+            &-img {
+                width: 100%;
+            }
+
+            &-course {
+                display: block;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 20px;
+                color: $gray-3;
+                text-align: center;
+            }
+
+            &-name {
+                display: block;
+                font-size: 24px;
+                line-height: 33px;
+                color: $gray-4;
+                text-align: center;
+
+            }
+        }
     }
 }

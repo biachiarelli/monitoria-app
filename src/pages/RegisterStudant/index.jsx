@@ -112,10 +112,10 @@ const RegisterStudant = () => {
               options={course}
               />
 
-            <div  className='Register-form__label'>
-              <label className='Register-form__label'>Estudante cotista? </label>
-              <RadioButton label="Sim" />
-              <RadioButton label="Não" />
+            <div  className='Register-form__item'>
+              <label className='Input-label'>Estudante cotista? </label>
+              <RadioButton label="Sim" name="register-studant" />
+              <RadioButton label="Não" name="register-studant" />
             </div>
             
             <Input
