@@ -3,9 +3,41 @@ import imgLogin from '../../assets/img/login-img.svg';
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import Alert from '../../components/Alert';
 
-const Login = () => {
+async function loginUser(credentials) {
+  console.log(credentials)
+  return fetch('https://sistema-monitoria-unb.herokuapp.com/v1/auth/login', {
+    method: 'POST',
+    headers: {'accept': 'text/plain'},
+    headers: {'Content-Type': 'application/json'},
+    mode: 'cors', 
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+ }
+
+ export default function Login({ setToken }) {
   const navigate = useNavigate();
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
+  const [alert, setAlert] = useState(false);
+  const [messageAlert, setMessageAlert] = useState("");
+  const [typeMessage, setTypeMessage] = useState("");
+
+  const handleSubmit = async e => {
+    setAlert(true);
+    setMessageAlert("Erro ao fazer requisição");
+    setTypeMessage("error")
+    e.preventDefault();
+    const token = await loginUser({
+      email,
+      senha
+    });
+    console.log(token)
+    setToken(token);
+  }
 
   return (
     <div className='Login'>
@@ -13,12 +45,14 @@ const Login = () => {
         <div className='Login-main'>
           <img className='Login-logo' src={imgLogo} alt="Logo recomendação de monitoria" />
           <h1 className='Login-title'>Entrar</h1>
-          <form className='Login-form'>
+          {alert && <Alert type={typeMessage} message={messageAlert} />}
+          <form className='Login-form' onSubmit={handleSubmit}>
             <Input
-              label="Matrícula"
-              placeholder="Informe a sua matrícula da UnB"
-              type="text"
+              label="E-mail"
+              placeholder="Informe o e-mail cadastrado"
+              type="email"
               required={true}
+              onChange={e => setEmail(e.target.value)}
               />
               <div className='Login-input-link'>
               <Input
@@ -26,11 +60,12 @@ const Login = () => {
                 placeholder="Informe a senha cadastrada"
                 type="password"
                 required={true}
+                onChange={e => setSenha(e.target.value)}
                 />
                 <span className='Login-link'>Esqueci minha senha</span>
               </div>
               
-              <Button type="submit" label="Entrar" buttonStyle="primary" onClick={() => navigate("/home")} />
+              <Button type="submit" label="Entrar" buttonStyle="primary" />
           </form>
           <div className="Login-footer">
             <div className="Login-text-line"><hr />Primeiro acesso?<hr /></div>
@@ -47,6 +82,4 @@ const Login = () => {
     </div>
   );
 };
-  
-  export default Login;
   

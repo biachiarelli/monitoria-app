@@ -8,6 +8,13 @@ const Home = () => {
     name: "Maria Silva"
   }
 
+  //const apiUrl = 'https://api.github.com/users/hacktivist123/repos';
+  const apiUrl = 'https://sistema-monitoria-unb.herokuapp.com/v1/aluno/alunos';
+
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => console.log('This is your data', data));
+
   return (
     <GridTemplate>
         <div className="Home">

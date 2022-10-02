@@ -11,13 +11,16 @@ import Schedules from "./pages/Schedules";
 import SearchMonitor from "./pages/SearchMonitor";
 import Preferences from "./pages/Preferences";
 import Profile from "./pages/Profile";
+import { useState } from "react";
 
 
 function App() {
+  const [token, setToken] = useState();
+
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={<Login setToken={setToken} />} />
       <Route path="/entrar" element={<Login />} />
       <Route path="/cadastro-aluno" element={<RegisterStudant />} />
       <Route path="/home" element={<Home />} />
@@ -26,7 +29,6 @@ function App() {
       <Route path="/preferencias" element={<Preferences />} />
       <Route path="/perfil" element={<Profile />} />
             
-      
       </Routes>
     </BrowserRouter>
   );

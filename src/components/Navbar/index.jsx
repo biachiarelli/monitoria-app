@@ -8,19 +8,21 @@ const Navbar = (props) => {
 
   return (
     <div className='Navbar'>
-        <img className='Navbar-img' src={img} alt="Imagem perfil" onClick={() => navigate("/")} />
-        <div className='Navbar-menu'>
-            
-          {props.menu.map((item, index) => (
-            <div key={index} className='Navbar-menu__item' onClick={() => navigate(item.link)} >
-                {item.label}
-            </div>
-          ))}
-        </div>
+      <div className='Navbar-img'>
+        <img src={img} alt="Imagem perfil" onClick={() => navigate("/")} />
+      </div>
+      <div className='Navbar-menu'>
+          
+        {props.menu.map((item, index) => (
+          <div key={index} className='Navbar-menu__item' onClick={() => navigate(item.link)} >
+              {item.label}
+          </div>
+        ))}
+      </div>
 
-        <div className='Navbar-footer'>
-            <Button buttonStyle="secondary" label="Sair" onClick={() => navigate("/entrar")} />
-        </div>
+      <div className='Navbar-footer'>
+          <Button buttonStyle="secondary" label="Sair" onClick={() => navigate("/entrar")} />
+      </div>
     </div>
   );
 };

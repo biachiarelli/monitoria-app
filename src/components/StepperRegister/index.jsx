@@ -9,7 +9,7 @@ const StepperRegister = (props) => {
     }
   }
 
-  const activeSize = (partSize * activeItem) - 6;
+  const activeSize = (partSize * activeItem);
 
     return (
         <div className="StepperRegister">
