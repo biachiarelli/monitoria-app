@@ -16,6 +16,10 @@
         align-items: center;
         grid-gap: 12px;
 
+        @include max-md {
+            grid-gap: 2px;  
+        }
+
         &__icon {
             color: $primary-color;
             font-size: 32px;
@@ -27,6 +31,10 @@
             font-size: 24px;       
             color: $gray-4;
             margin: 0;
+
+            @include max-md {
+                font-size: 18px;   
+            }
 
         }
     }
@@ -84,7 +92,11 @@
         margin-top: 40px;
         width: 100%;    
         display: flex;
-        grid-gap: 64px;
+        gap: 64px;
+
+        @include max-md {
+            gap: 16px;
+        }
     }
 
 

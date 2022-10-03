@@ -15,11 +15,15 @@
         font-size: 16px;
         line-height: 22px;
         color: $gray-4;
-        
+        cursor: pointer;
+
+        @include max-md {
+            display: none;
+        }
+
         .bold {
             font-weight: bold;
         }
-        cursor: pointer;
 
     }
 
@@ -28,5 +32,28 @@
         width: auto;
         border-radius: 100%;
         cursor: pointer;
+
+        @include max-md {
+            height: 40px;
+        }
+    }
+
+    &-logo {
+        position: absolute;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        display: none;
+
+        @include max-md {
+            display: block;
+        }
+
+        img {
+            height: 100%;
+        }
     }
 }

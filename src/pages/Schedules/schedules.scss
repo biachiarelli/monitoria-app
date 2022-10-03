@@ -1,20 +1,26 @@
 .Schedules {
-    display: grid;
-    grid-gap: 16x;
 
     &-title {
         font-size: 32px;
-        
         color: $gray-4;
         font-weight: 700;
         margin: 0;
+
+        @include max-md {
+            font-size: 24px;
+        }
     }
 
     &-label {
-        
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        
+        @include max-sm {
+            flex-direction: column;
+            align-items: initial;
+        }
 
         &__text {
             font-weight: 400;
@@ -25,6 +31,11 @@
         &__itens {
             display: flex;
             grid-gap: 24px;
+            
+            @include max-sm {
+                flex-direction: column;
+                gap: 2px;
+            }
         }
 
         &__item {
@@ -35,10 +46,19 @@
             align-items: center;
             justify-items: center;
 
+            @include max-sm {
+                font-size: 12px;
+            }
+
             .square {
                 width: 16px;
                 height: 16px;
                 border-radius: 2px;
+                
+                @include max-sm {
+                    width: 8px;
+                    height: 8px;
+                }
 
                 &.gray {
                     background: $gray-2;
@@ -60,6 +80,10 @@
     }
 
     &-table {
+        @include max-md {
+            margin-top: 16px;
+            overflow: auto;
+        }
         table {
             border-collapse: collapse;
             width: 100%;
@@ -78,6 +102,13 @@
             line-height: 22px;
             text-align: center;
             color: $gray-4;
+            
+            @include max-md {
+                font-size: 14px;
+                line-height: 18px;
+                min-width: 72px;
+                padding: 0 4px;
+            }
         }
 
         td {
@@ -89,6 +120,11 @@
             text-align: center;
             color: $gray-4;
             height: 40px;
+
+            @include max-md {
+                font-size: 14px;
+                line-height: 18px;
+            }
         }
     }
     

@@ -1,18 +1,31 @@
 .SearchMonitor {
-    display: grid;
-    grid-gap: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include max-md {
+        gap: 16px;
+    }
 
     &-header {
-        display: grid;
-        grid-gap: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include max-md {
+            gap: 8px;
+        }
     }
 
     &-title {
         font-size: 32px;
-        
         color: $gray-4;
         font-weight: 700;
         margin: 0;
+
+        @include max-md {
+            font-size: 24px;
+        }
     }
 
     &-subtitle {
@@ -24,6 +37,11 @@
             color: $gray-4;
             font-size: 18px;
             line-height: 25px;
+
+            @include max-md {
+                font-size: 14px;
+                line-height: initial;
+            }
         }
 
         button {
@@ -40,6 +58,13 @@
     &-cards {
         display: flex;
         gap: 40px;
+        
+        @include max-sm {
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+            margin: 16px;
+        }
 
         .card {
             width: 256px;
@@ -52,6 +77,11 @@
             gap: 16px;
             align-items: center;
 
+            @include max-sm {
+                width: 100%;
+                gap: 12px;
+            }
+
             &-img {
                 width: 100%;
             }
@@ -63,6 +93,11 @@
                 line-height: 20px;
                 color: $gray-3;
                 text-align: center;
+
+                @include max-sm {
+                    font-size: 12px;
+                    line-height: initial;
+                }
             }
 
             &-name {
@@ -71,6 +106,11 @@
                 line-height: 33px;
                 color: $gray-4;
                 text-align: center;
+
+                @include max-sm {
+                    font-size: 18px;
+                    line-height: initial;
+                }
 
             }
         }

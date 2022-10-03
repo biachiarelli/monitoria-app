@@ -1,6 +1,4 @@
 const Input = (props) => {
-
-  console.log(props)
     return (
         <div className="Input" onChange={props.onChange}>
             <label className="Input-label">{props.label}</label>

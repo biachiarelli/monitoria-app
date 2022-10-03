@@ -3,18 +3,30 @@
     display: flex;
     flex-direction: column;
 
+    @include max-md {
+        gap: 24px;
+    }
+
     &-header {
         display: flex;
         flex-direction: column;
         gap: 32px;
+        
+        @include max-md {
+            gap: 16px;
+        }
     }
 
     &-title {
         font-size: 32px;
-        
         color: $gray-4;
         font-weight: 700;
         margin: 0;
+        
+        @include max-md {
+            font-size: 24px;
+        }
+
     }
 
     &-text {
@@ -22,6 +34,10 @@
         font-size: 16px;
         color: $gray-4;
         margin: 0;
+        
+        @include max-md {
+            font-size: 14px;
+        }
     }
 
     
@@ -35,6 +51,10 @@
 
         @include max-lg {
             grid-template-columns: auto;
+        }
+
+        @include max-md {
+            gap: 24px;
         }
 
         &__radio {
@@ -55,6 +75,10 @@
         display: flex;
         grid-gap: 64px;
         width: 384px;
+
+        @include max-md {
+            width: 100%;
+        }
     }
 
 

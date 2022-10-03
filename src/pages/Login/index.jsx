@@ -7,15 +7,14 @@ import { useState } from 'react';
 import Alert from '../../components/Alert';
 
 async function loginUser(credentials) {
-  console.log(credentials)
+  console.log(JSON.stringify(credentials))
+  
   return fetch('https://sistema-monitoria-unb.herokuapp.com/v1/auth/login', {
     method: 'POST',
-    headers: {'accept': 'text/plain'},
-    headers: {'Content-Type': 'application/json'},
-    mode: 'cors', 
+    headers: {'Content-Type': 'application/json', 'accept': 'text/plain'},
     body: JSON.stringify(credentials)
   })
-    .then(data => data.json())
+    .then(data => console.log(data))
  }
 
  export default function Login({ setToken }) {
@@ -31,12 +30,13 @@ async function loginUser(credentials) {
     setMessageAlert("Erro ao fazer requisição");
     setTypeMessage("error")
     e.preventDefault();
+
     const token = await loginUser({
       email,
       senha
     });
     console.log(token)
-    setToken(token);
+    //setToken(token);
   }
 
   return (

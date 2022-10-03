@@ -50,7 +50,7 @@ const Schedules = () => {
            <table>
             <thead>
               <tr>
-                <th>Horários/Data</th>
+                <th>Horários / Data</th>
                 {avaliableDays.map((day, index) => (
                   <th key={index}>{day}</th>
                 ))}

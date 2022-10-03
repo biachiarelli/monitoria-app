@@ -1,7 +1,6 @@
 .Home {
     &-title {
         font-size: 32px;
-        
         color: $gray-4;
         font-weight: 400;
         margin: 0;
@@ -9,12 +8,22 @@
         .bold {
             font-weight: bold;
         }
+
+        @include max-md {
+            font-size: 24px;
+        }
     }
 
     &-subtitle {
         font-weight: 700;
         font-size: 24px;
         color: $gray-2;
+
+        @include max-md {
+            font-weight: 400;
+            color: $gray-3;
+            font-size: 18px;
+        }
     }
 
     &-options {
@@ -44,6 +53,12 @@
             color: $gray-4;
             cursor: pointer;
             max-width: 400px;
+
+            @include max-md {
+                max-width: -webkit-fill-available;
+                padding: 48px 24px;
+                font-size: 22px;
+            }
 
             .bold {
                 font-weight: 700;
