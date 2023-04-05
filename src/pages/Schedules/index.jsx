@@ -34,6 +34,200 @@ const Schedules = () => {
     "22:30",
   ]
 
+  let personalSchedule = [
+    { day: 'segunda',  hour: '09:00', status: true, person: 'Maria Silva' }, 
+    { day: 'segunda',  hour: '09:30', status: true, person: 'Maria Silva' }, 
+    { day: 'segunda',  hour: '10:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '10:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '11:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '11:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '12:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '12:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '13:00', status: false, person: '' }, 
+    { day: 'segunda',  hour: '13:30', status: false, person: '' }, 
+    { day: 'segunda',  hour: '14:00', status: false, person: '' }, 
+    { day: 'segunda',  hour: '14:30', status: false, person: '' }, 
+    { day: 'segunda',  hour: '15:00', status: false, person: '' }, 
+    { day: 'segunda',  hour: '15:30', status: false, person: '' }, 
+    { day: 'segunda',  hour: '16:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '16:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '17:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '17:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '18:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '18:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '19:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '19:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '20:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '20:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '21:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '21:30', status: null, person: '' }, 
+    { day: 'segunda',  hour: '22:00', status: null, person: '' }, 
+    { day: 'segunda',  hour: '22:30', status: null, person: '' }, 
+    
+    { day: 'terça',  hour: '09:00', status: false, person: '' }, 
+    { day: 'terça',  hour: '09:30', status: false, person: '' }, 
+    { day: 'terça',  hour: '10:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '10:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '11:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '11:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '12:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '12:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '13:00', status: false, person: '' }, 
+    { day: 'terça',  hour: '13:30', status: false, person: '' }, 
+    { day: 'terça',  hour: '14:00', status: false, person: '' }, 
+    { day: 'terça',  hour: '14:30', status: false, person: '' }, 
+    { day: 'terça',  hour: '15:00', status: false, person: '' }, 
+    { day: 'terça',  hour: '15:30', status: false, person: '' }, 
+    { day: 'terça',  hour: '16:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '16:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '17:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '17:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '18:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '18:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '19:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '19:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '20:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '20:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '21:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '21:30', status: null, person: '' }, 
+    { day: 'terça',  hour: '22:00', status: null, person: '' }, 
+    { day: 'terça',  hour: '22:30', status: null, person: '' }, 
+
+    
+    { day: 'quarta',  hour: '09:00', status: true, person: 'Maria Silva' }, 
+    { day: 'quarta',  hour: '09:30', status: true, person: 'Maria Silva' }, 
+    { day: 'quarta',  hour: '10:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '10:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '11:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '11:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '12:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '12:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '13:00', status: false, person: '' }, 
+    { day: 'quarta',  hour: '13:30', status: false, person: '' }, 
+    { day: 'quarta',  hour: '14:00', status: false, person: '' }, 
+    { day: 'quarta',  hour: '14:30', status: false, person: '' }, 
+    { day: 'quarta',  hour: '15:00', status: false, person: '' }, 
+    { day: 'quarta',  hour: '15:30', status: false, person: '' }, 
+    { day: 'quarta',  hour: '16:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '16:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '17:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '17:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '18:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '18:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '19:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '19:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '20:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '20:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '21:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '21:30', status: null, person: '' }, 
+    { day: 'quarta',  hour: '22:00', status: null, person: '' }, 
+    { day: 'quarta',  hour: '22:30', status: null, person: '' }, 
+
+    { day: 'quinta',  hour: '09:00', status: false, person: '' }, 
+    { day: 'quinta',  hour: '09:30', status: false, person: '' }, 
+    { day: 'quinta',  hour: '10:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '10:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '11:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '11:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '12:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '12:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '13:00', status: false, person: '' }, 
+    { day: 'quinta',  hour: '13:30', status: false, person: '' }, 
+    { day: 'quinta',  hour: '14:00', status: false, person: '' }, 
+    { day: 'quinta',  hour: '14:30', status: false, person: '' }, 
+    { day: 'quinta',  hour: '15:00', status: false, person: '' }, 
+    { day: 'quinta',  hour: '15:30', status: false, person: '' }, 
+    { day: 'quinta',  hour: '16:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '16:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '17:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '17:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '18:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '18:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '19:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '19:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '20:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '20:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '21:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '21:30', status: null, person: '' }, 
+    { day: 'quinta',  hour: '22:00', status: null, person: '' }, 
+    { day: 'quinta',  hour: '22:30', status: null, person: '' }, 
+
+    
+    { day: 'sexta',  hour: '09:00', status: true, person: 'Maria Silva' }, 
+    { day: 'sexta',  hour: '09:30', status: true, person: 'Maria Silva' }, 
+    { day: 'sexta',  hour: '10:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '10:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '11:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '11:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '12:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '12:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '13:00', status: false, person: '' }, 
+    { day: 'sexta',  hour: '13:30', status: false, person: '' }, 
+    { day: 'sexta',  hour: '14:00', status: false, person: '' }, 
+    { day: 'sexta',  hour: '14:30', status: false, person: '' }, 
+    { day: 'sexta',  hour: '15:00', status: false, person: '' }, 
+    { day: 'sexta',  hour: '15:30', status: false, person: '' }, 
+    { day: 'sexta',  hour: '16:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '16:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '17:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '17:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '18:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '18:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '19:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '19:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '20:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '20:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '21:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '21:30', status: null, person: '' }, 
+    { day: 'sexta',  hour: '22:00', status: null, person: '' }, 
+    { day: 'sexta',  hour: '22:30', status: null, person: '' }, 
+
+    
+    { day: 'sábado',  hour: '09:00', status: null, person: 'Maria Silva' }, 
+    { day: 'sábado',  hour: '09:30', status: null, person: 'Maria Silva' }, 
+    { day: 'sábado',  hour: '10:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '10:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '11:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '11:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '12:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '12:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '13:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '13:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '14:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '14:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '15:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '15:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '16:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '16:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '17:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '17:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '18:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '18:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '19:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '19:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '20:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '20:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '21:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '21:30', status: null, person: '' }, 
+    { day: 'sábado',  hour: '22:00', status: null, person: '' }, 
+    { day: 'sábado',  hour: '22:30', status: null, person: '' }, 
+  ]
+
+  function changeStatus(day, hour) {
+    console.log(day);
+    console.log(hour);
+
+    const newSchedule = personalSchedule.map(item => {
+      if(item.day === day && item.hour === hour) {
+        if(item.status != null) {
+          item.status = true
+        } else {
+          item.status = null
+        }
+      }
+    })
+  }
+
   return (
     <GridTemplate>
         <div className="Schedules">
@@ -42,8 +236,8 @@ const Schedules = () => {
                <h2 className="Schedules-label__text">Clique para marcar como disponível/indisponível</h2>
                <div className="Schedules-label__itens">
                 <div className="Schedules-label__item"><span className="square gray"></span> Indisponível</div>
-                <div className="Schedules-label__item"><span className="square light"></span> Com monitoria</div>
-                <div className="Schedules-label__item"><span className="square dark"></span> Disponível</div>
+                <div className="Schedules-label__item"><span className="square dark"></span> Com monitoria</div>
+                <div className="Schedules-label__item"><span className="square light"></span> Disponível</div>
                </div>
             </div>
           <div className="Schedules-table">
@@ -61,7 +255,23 @@ const Schedules = () => {
               <tr key={index}>
                 <td>{hour}</td>
                 {avaliableDays.map((day, index) => (
-                  <td></td>
+                  <td key={index} >
+                  {personalSchedule.filter(item => item.day.toLowerCase() === day.toLowerCase() && item.hour === hour)[0]?.status && 
+                    <span className="dark"> 
+                      {personalSchedule.filter(item =>  item.day.toLowerCase() === day.toLowerCase() && item.hour === hour)[0]?.person} 
+                    </span>
+                  }
+                  {personalSchedule.filter(item => item.day.toLowerCase() === day.toLowerCase() && item.hour === hour)[0]?.status === false && 
+                    <span className="light"> 
+                      
+                    </span>
+                  }
+                  {personalSchedule.filter(item => item.day.toLowerCase() === day.toLowerCase() && item.hour === hour)[0]?.status === null && 
+                    <span className="gray"> 
+                      
+                    </span>
+                  }
+                 </td>
                 ))}
               </tr>
               ))}

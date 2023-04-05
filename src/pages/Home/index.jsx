@@ -7,13 +7,6 @@ const Home = () => {
   const info = {
     name: "Maria Silva"
   }
-
-  //const apiUrl = 'https://api.github.com/users/hacktivist123/repos';
-  const apiUrl = 'https://sistema-monitoria-unb.herokuapp.com/v1/curso/1';
-
-  fetch(apiUrl)
-    .then((response) => response.json())
-    .then((data) => console.log(data));
     
 
   return (

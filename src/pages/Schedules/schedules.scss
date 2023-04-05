@@ -59,21 +59,6 @@
                     width: 8px;
                     height: 8px;
                 }
-
-                &.gray {
-                    background: $gray-2;
-                    border: 1px solid #E8E8E8;
-                }
-
-                &.light {
-                    background: $primary-color;
-                    opacity: 24%;
-
-                }
-
-                &.dark {
-                    background: $primary-color;
-                }
             }
             
         }
@@ -111,7 +96,11 @@
             }
         }
 
-        td {
+        span {
+            display: flex;
+        }
+
+        td, span {
             width: 172px;
             align-items: center;
             justify-content: center;
@@ -126,6 +115,24 @@
                 line-height: 18px;
             }
         }
+    }
+
+    
+
+    .gray {
+        background: $gray-2;
+        border: 1px solid #E8E8E8;
+    }
+
+    .light {
+        background: $primary-color;
+        opacity: 24%;
+
+    }
+
+    .dark {
+        background: $primary-color;
+        color: $white;
     }
     
 }
