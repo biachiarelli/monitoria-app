@@ -1,21 +1,35 @@
+import { useEffect, useState } from "react";
+
 const StepperRegister = (props) => {
-  const nItens = props.itens.length
-  const partSize = 100 / nItens;
-  let activeItem = 0
+  const partSize = (100 / props.length);
+  const [activeItem, setActiveItem] = useState(1);
+  const [activeSize, setActiveSize] = useState(0);
+  const [itens, setItens] = useState([]);
 
-  for (let item of props.itens) {
-    if(item.active) {
-      activeItem++;
-    }
-  }
+  useEffect(() => {
+    setItens(props.getItens());
+  
+    console.log(props.getItens());
 
-  const activeSize = (partSize * activeItem);
+    props.getItens().forEach((item, index) => {
+      console.log(item);
+      if(item.active)
+      setActiveItem(index + 1);
+    });
+
+    setActiveSize(partSize * activeItem)
+
+    console.log(activeItem)
+    console.log(activeSize)
+    
+
+  });
 
     return (
         <div className="StepperRegister">
           <hr className="StepperRegister-line background" />
           <hr className="StepperRegister-line active" style={{width: activeSize + '%'}} />
-          {props.itens.map((item, index) => (
+          {itens.map((item, index) => (
             <div key={index} >
               <div  className={"StepperRegister-item " + (item.active ? 'active' : '')} >
                   <div className="StepperRegister-item__number">{index+1}</div>

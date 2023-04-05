@@ -6,17 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Alert from '../../components/Alert';
 
-async function loginUser(credentials) {
-  console.log(JSON.stringify(credentials))
-  
-  return fetch('https://sistema-monitoria-unb.herokuapp.com/v1/auth/login', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json', 'accept': 'text/plain'},
-    body: JSON.stringify(credentials)
-  })
-    .then(data => console.log(data))
- }
-
  export default function Login({ setToken }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
@@ -26,17 +15,7 @@ async function loginUser(credentials) {
   const [typeMessage, setTypeMessage] = useState("");
 
   const handleSubmit = async e => {
-    setAlert(true);
-    setMessageAlert("Erro ao fazer requisição");
-    setTypeMessage("error")
-    e.preventDefault();
-
-    const token = await loginUser({
-      email,
-      senha
-    });
-    console.log(token)
-    //setToken(token);
+     navigate("/home");
   }
 
   return (

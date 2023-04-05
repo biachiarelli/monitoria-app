@@ -12,6 +12,7 @@ import SearchMonitor from "./pages/SearchMonitor";
 import Preferences from "./pages/Preferences";
 import Profile from "./pages/Profile";
 import { useState } from "react";
+import RegisterMonitor from "./pages/RegisterMonitor";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/" element={<Login setToken={setToken} />} />
       <Route path="/entrar" element={<Login />} />
       <Route path="/cadastro-aluno" element={<RegisterStudant />} />
+      <Route path="/cadastro-monitor" element={<RegisterMonitor />} />
       <Route path="/home" element={<Home />} />
       <Route path="/horarios-disponiveis" element={<Schedules />} />
       <Route path="/buscar-monitor" element={<SearchMonitor />} />

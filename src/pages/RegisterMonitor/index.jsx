@@ -8,11 +8,11 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 import RadioButton from '../../components/RadioButton';
 
-const RegisterStudant = () => {
+const RegisterMonitor = () => {
   const navigate = useNavigate();
 
   const materias = ["APC","CB"]
-  const turmas = ["A","B", "C"]
+  const turma = ["2020/1","2020/2", "2021/1","2021/2", "2022/1","2022/2", "2023/1","2023/2", ]
   const course = ["Ciência da Computação","Computação Licenciatura", "Engenharia da Computação"]
   const gender = ["Feminino","Masculino"]
   let itens = [
@@ -40,7 +40,7 @@ const RegisterStudant = () => {
   }
 
   return (
-    <div className='Register'>
+    <div className='Register-monitor'>
       <div className="Register-wrapper container">
         <div className='Register-main'>
           <img className='Register-logo' src={imgLogo} alt="Logo recomendação de monitoria" />
@@ -84,18 +84,18 @@ const RegisterStudant = () => {
                 />
                 
               <Input
-                label="Matéria"
+                label="Matéria que esta como monitor"
                 placeholder="Selecione a matéria "
                 type="select"
                 options={materias}
                 />
                 
               <Input
-                label="Turma"
+                label="Turmaque esta como monitor"
                 placeholder="Selecione a turma"
                 type="select"
-                options={turmas}
-                />            
+                options={turma}
+                />              
                 
             </form>
             <div className='Register-buttons'>
@@ -112,6 +112,7 @@ const RegisterStudant = () => {
             <Input
               label="Curso"
               placeholder="Selecione o curso"
+              type="select"
               options={course}
               />
 
@@ -124,13 +125,13 @@ const RegisterStudant = () => {
             <Input
               label="Gênero"
               placeholder="Selecione o gênero"
+              type="select"
               options={gender}
               />
 
             <Input
               label="Idade"
-              placeholder="Informe sua idade"
-              type="text"
+              placeholder="Informe a idade"
               />
           </form>
             <div className='Register-buttons'>
@@ -173,5 +174,5 @@ const RegisterStudant = () => {
   );
 };
   
-  export default RegisterStudant;
+  export default RegisterMonitor;
   
