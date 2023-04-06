@@ -115,6 +115,12 @@ const RegisterStudant = () => {
               options={course}
               />
 
+              <Input
+                label="Matrícula"
+                placeholder="Informe a matrícula"
+                type="text"
+                />
+
             <div  className='Register-form__item'>
               <label className='Input-label'>Estudante cotista? </label>
               <RadioButton label="Sim" name="register-studant" />
@@ -125,12 +131,6 @@ const RegisterStudant = () => {
               label="Gênero"
               placeholder="Selecione o gênero"
               options={gender}
-              />
-
-            <Input
-              label="Idade"
-              placeholder="Informe sua idade"
-              type="text"
               />
           </form>
             <div className='Register-buttons'>
