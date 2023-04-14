@@ -1,5 +1,5 @@
 .Preferences {
-    gap: 32px;
+    gap: 56px;
     display: flex;
     flex-direction: column;
 
@@ -10,7 +10,7 @@
     &-header {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 32px;
         
         @include max-md {
             gap: 16px;
@@ -18,7 +18,7 @@
     }
 
     &-title {
-        font-size: 24px;
+        font-size: 32px;
         color: $gray-4;
         font-weight: 700;
         margin: 0;
@@ -31,7 +31,7 @@
 
     &-text {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         color: $gray-4;
         margin: 0;
         

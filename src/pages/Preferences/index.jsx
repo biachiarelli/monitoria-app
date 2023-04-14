@@ -27,12 +27,6 @@ const Preferences = () => {
               options={course}
               />
 
-              <Input
-                label="Matrícula"
-                placeholder="Informe a matrícula"
-                type="text"
-                />
-
             <div  className='Preferences-form__item'>
               <label className='Input-label'>Estudante cotista? </label>
               <div className='Preferences-form__radio'>
@@ -47,7 +41,12 @@ const Preferences = () => {
               type="select"
               options={gender}
               />
-              
+
+            <Input
+              label="Idade"
+              placeholder="Selecione a turma"
+              type={turmas}
+              />
           </form>
             <div className='Preferences-buttons'>
                 <Button label="Editar" buttonStyle="secondary" />

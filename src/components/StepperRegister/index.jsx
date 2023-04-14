@@ -9,18 +9,18 @@ const StepperRegister = (props) => {
   useEffect(() => {
     setItens(props.getItens());
   
-    console.log(props.getItens());
+    //console.log(props.getItens());
 
     props.getItens().forEach((item, index) => {
-      console.log(item);
+      //console.log(item);
       if(item.active)
       setActiveItem(index + 1);
     });
 
     setActiveSize(partSize * activeItem)
 
-    console.log(activeItem)
-    console.log(activeSize)
+    //console.log(activeItem)
+    //console.log(activeSize)
     
 
   });

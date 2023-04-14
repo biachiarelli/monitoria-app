@@ -3,14 +3,16 @@
     grid-gap: 16px;
     align-items: center;
     justify-content: flex-end;
-    padding: 8px 40px;
+    padding: 12px 40px;
     background: $white;
 
     &-info {
         display: flex;
         flex-direction: column;
+        grid-gap: 8px;
+
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 22px;
         color: $gray-4;
         cursor: pointer;
@@ -26,7 +28,7 @@
     }
 
     &-img {
-        height: 40px;
+        height: 54px;
         width: auto;
         border-radius: 100%;
         cursor: pointer;
