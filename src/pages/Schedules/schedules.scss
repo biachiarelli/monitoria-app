@@ -1,7 +1,7 @@
 .Schedules {
 
     &-title {
-        font-size: 32px;
+        font-size: 24px;
         color: $gray-4;
         font-weight: 700;
         margin: 0;
@@ -59,21 +59,6 @@
                     width: 8px;
                     height: 8px;
                 }
-
-                &.gray {
-                    background: $gray-2;
-                    border: 1px solid #E8E8E8;
-                }
-
-                &.light {
-                    background: $primary-color;
-                    opacity: 24%;
-
-                }
-
-                &.dark {
-                    background: $primary-color;
-                }
             }
             
         }
@@ -98,7 +83,7 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 22px;
             text-align: center;
             color: $gray-4;
@@ -111,11 +96,15 @@
             }
         }
 
-        td {
+        span {
+            display: flex;
+        }
+
+        td, span {
             width: 172px;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 22px;            
             text-align: center;
             color: $gray-4;
@@ -126,6 +115,24 @@
                 line-height: 18px;
             }
         }
+    }
+
+    
+
+    .gray {
+        background: $gray-2;
+        border: 1px solid #E8E8E8;
+    }
+
+    .light {
+        background: $primary-color;
+        opacity: 24%;
+
+    }
+
+    .dark {
+        background: $primary-color;
+        color: $white;
     }
     
 }

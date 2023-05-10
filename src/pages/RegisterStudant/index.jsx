@@ -8,69 +8,27 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 import RadioButton from '../../components/RadioButton';
 
-// Conexão com a API
-import api from '../../api/api'
-
 const RegisterStudant = () => {
   const navigate = useNavigate();
 
-  const materias = ["APC", "CB"]
-  const turmas = ["A", "B", "C"]
-  const course = ["Ciência da Computação", "Computação Licenciatura", "Engenharia da Computação"]
-  const gender = ["Feminino", "Masculino"]
+  const materias = ["APC","CB"]
+  const turmas = ["A","B", "C"]
+  const course = ["Ciência da Computação","Computação Licenciatura", "Engenharia da Computação"]
+  const gender = ["Feminino","Masculino"]
   let itens = [
-    { label: "Informações pessoais", active: true },
-    { label: "Preferências de recomendação", active: false },
-    { label: "Senha", active: false }
-  ]
+    {label: "Informações pessoais", active: true},
+    {label: "Preferências de recomendação", active: false},
+    {label: "Senha", active: false}
+  ] 
   const [step, setStep] = useState(0);
 
-  // All the sign in data is stored here
-  const [data, setData] = useState({
-    id: 0,
-    name: '',
-    telephone: '',
-    birthDate: '',
-    discipline: '',
-    class: '',
-    course: "",
-    quotaHolder: false,
-    gender: "",
-    email: "",
-    password: "",
-    role: "Aluno"
-  })
-
-  // Check the confirmation password
-  const [checkPassword, setCheckPassword] = useState('')
-
-  async function submit(e) {
-    // Send to backend
-    api.post('/signup', data)
-
-    // Clean the state
-    setData({
-      id: 0,
-      name: '',
-      telephone: '',
-      birthDate: '',
-      discipline: '',
-      class: '',
-      course: "",
-      quotaHolder: false,
-      gender: "",
-      email: "",
-      password: "",
-      role: "Aluno"
-    })
-
-    // Navigate to Login
-    navigate('/')
+  function submit() {
+    console.log("submit")
   }
 
   useEffect(() => {
     itens.forEach((item, index) => {
-      if (index <= step)
+      if(index <= step)
         item.active = true;
       else
         item.active = false
@@ -94,159 +52,126 @@ const RegisterStudant = () => {
             <StepperRegister getItens={getItens} length={itens.length} />
           </div>
           {step === 0 &&
-            <>
-              <form className='Register-form'>
-                <Input
-                  label="Nome"
-                  placeholder="Informe o seu nome completo"
-                  type="text"
-                  required={true}
-                  returnValue={(response) => setData({ ...data, name: response })}
-                />
+          <>
+          <form className='Register-form'>
+            <Input
+              label="Nome"
+              placeholder="Informe o seu nome completo"
+              type="text"
+              required={true}
+              />
 
-                <Input
-                  label="E-mail"
-                  placeholder="Informe o e-mail"
-                  type="email"
-                  required={true}
-                  returnValue={(response) => setData({ ...data, email: response })}
+              <Input
+                label="E-mail"
+                placeholder="Informe o e-mail"
+                type="email"
+                required={true}
                 />
-
-                <Input
-                  label="Celular (opcional)"
-                  placeholder="(00) 00000-0000 "
-                  type="text"
-                  mask="(00) 00000-0000"
-                  required={true}
-                  returnValue={(response) => setData({ ...data, telephone: response })}
+              
+              <Input
+                label="Celular (opcional)"
+                placeholder="(00) 00000-0000 "
+                type="text"
+                mask="(00) 00000-0000"
+                required={true}
                 />
-
-                <Input
-                  label="Data de nascimento"
-                  placeholder="Informe "
-                  type="date"
-                  required={true}
-                  returnValue={(response) => setData({ ...data, birthDate: response })}
+                
+              <Input
+                label="Data de nascimento"
+                placeholder="Informe "
+                type="date"
+                required={true}
                 />
-
-                <Input
-                  label="Matéria"
-                  placeholder="Selecione a matéria "
-                  type="select"
-                  options={materias}
-                  returnValue={(response) => setData({ ...data, discipline: response })}
+                
+              <Input
+                label="Matéria"
+                placeholder="Selecione a matéria "
+                type="select"
+                options={materias}
                 />
-
-                <Input
-                  label="Turma"
-                  placeholder="Selecione a turma"
-                  type="select"
-                  options={turmas}
-                  returnValue={(response) => setData({ ...data, class: response })}
-                />
-
-              </form>
-              <div className='Register-buttons'>
+                
+              <Input
+                label="Turma"
+                placeholder="Selecione a turma"
+                type="select"
+                options={turmas}
+                />            
+                
+            </form>
+            <div className='Register-buttons'>
                 <Button label="Cancelar" buttonStyle="secondary" onClick={() => navigate("/entrar")} />
                 <Button label="Continuar" buttonStyle="primary" onClick={() => setStep(step + 1)} />
-              </div>
+            </div>
             </>
           }
 
-          {step === 1 &&
-            <>
-              <form className='Register-form'>
+        {step === 1 &&
+          <>
+          <form className='Register-form'>
+              
+            <Input
+              label="Curso"
+              placeholder="Selecione o curso"
+              options={course}
+              />
 
-                <Input
-                  label="Curso"
-                  placeholder="Selecione o curso"
-                  options={course}
-                  returnValue={(response) => setData({ ...data, course: response })}
+              <Input
+                label="Matrícula"
+                placeholder="Informe a matrícula"
+                type="text"
                 />
 
-                <Input
-                  label="Matrícula"
-                  placeholder="Informe a matrícula"
-                  type="text"
-                  returnValue={(response) => setData({ ...data, id: response })}
-                />
-
-                <div className='Register-form__item'>
-                  <label className='Input-label'>Estudante cotista? </label>
-                  <RadioButton
-                    label="Sim"
-                    name="register-studant"
-                    returnValue={(response) => setData({ ...data, quotaHolder: response })}
-                  //returnValue={(response) => console.log(response)}
-                  />
-                  <RadioButton
-                    label="Não"
-                    name="register-studant"
-                    returnValue={(response) => setData({ ...data, quotaHolder: response })}
-                  //returnValue={(response) => console.log(response)}
-                  />
-                </div>
-
-                <Input
-                  label="Gênero"
-                  placeholder="Selecione o gênero"
-                  options={gender}
-                  returnValue={(response) => setData({ ...data, gender: response })}
-                />
-
-              </form>
-              <div className='Register-buttons'>
+            <div  className='Register-form__item'>
+              <label className='Input-label'>Estudante cotista? </label>
+              <RadioButton label="Sim" name="register-studant" />
+              <RadioButton label="Não" name="register-studant" />
+            </div>
+            
+            <Input
+              label="Gênero"
+              placeholder="Selecione o gênero"
+              options={gender}
+              />
+          </form>
+            <div className='Register-buttons'>
                 <Button label="Voltar" buttonStyle="secondary" onClick={() => setStep(step - 1)} />
                 <Button label="Continuar" buttonStyle="primary" onClick={() => setStep(step + 1)} />
-              </div>
-            </>
+            </div>
+          </>
           }
           {step === 2 &&
             <>
-              <form className='Register-form'>
-                <Input
-                  label="Senha"
-                  placeholder="Informe a senha"
-                  type="password"
-                  required={true}
-                  returnValue={(response) => setData({ ...data, password: response })}
-                  mesage={data.password !== checkPassword ? "Senhas não coincidem." : ""}
+            <form className='Register-form'>
+              <Input
+                label="Senha"
+                placeholder="Informe a senha"
+                type="password"
+                required={true}
                 />
                 <Input
                   label="Confirme a senha"
                   placeholder="Informe a senha"
                   type="password"
                   required={true}
-                  returnValue={(response) => setCheckPassword(response)}
-                  mesage={data.password !== checkPassword ? "Senhas não coincidem." : ""}
-                />
-              </form>
+                  />
+            </form>
 
-              <div className='Register-buttons'>
-                <Button
-                  label="Voltar"
-                  buttonStyle="secondary"
-                  onClick={() => setStep(step - 1)}
-                  disabled={data.password !== checkPassword}
-                />
-                <Button
-                  label="Finalizar"
-                  buttonStyle="primary"
-                  onClick={() => submit()}
-                  disabled={data.password !== checkPassword}
-                />
-              </div>
+            <div className='Register-buttons'>
+                <Button label="Voltar" buttonStyle="secondary" onClick={() => setStep(step - 1)} />
+                <Button label="Finalizar" buttonStyle="primary" onClick={() => submit()} />
+            </div>
             </>
           }
-
-
+          
+          
         </div>
       </div>
-      <div className='Register-img'>
-        <img src={imgRegister} alt="Ilustração de Register" />
-      </div>
+        <div className='Register-img'>
+          <img src={imgRegister} alt="Ilustração de Register" />
+        </div>
     </div>
   );
 };
-
-export default RegisterStudant;
+  
+  export default RegisterStudant;
+  

@@ -2,21 +2,17 @@ import GridTemplate from "../../components/GridTemplate";
 import profileImg from '../../assets/img/profile.png';
 import { useNavigate } from 'react-router-dom';
 import Button from "../../components/Button";
-import { useSelector } from "react-redux";
 
 const Profile = () => {
   const navigate = useNavigate();
 
-  // Redux state
-  const {userData} = useSelector(state => state) 
-
   const data = {
-    img: userData.photo || profileImg,
-    course: userData.course,
-    subject: userData.discipline,
-    class: userData.class,
-    email: userData.email,
-    name: userData.name
+    img: profileImg,
+    course: "Ciência da computação",
+    subject: "APC",
+    class: "A",
+    email: "mariasilva@email.com",
+    name: "Maria Silva"
   }
 
   return (
