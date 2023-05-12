@@ -7,13 +7,13 @@ const GridTemplate = (props) => {
     const menu = [
         {
             label: "Minhas monitorias",
-            link: "/home"
+            link: "/minhas-monitorias"
         },{
-            label: "Meus horários disponíveis",
-            link: "/horarios-disponiveis"
+            label: "Calendário de monitoria",
+            link: "/calendario"
         },{
             label: "Buscar monitores",
-            link: "/buscar-monitor"
+            link: "/monitores"
         },{
             label: "Preferências de recomendação",
             link: "/preferencias"

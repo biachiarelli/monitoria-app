@@ -1,0 +1,56 @@
+.darkBG {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal {
+    min-width: 600px;
+    min-height: 400px;
+    background: $white;
+    z-index: 10;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    
+
+    @include max-md {
+        min-width: 60vw;
+        min-height: 40vh;
+    }
+
+    
+
+    @include max-sm {
+        width: 80vw;
+        height: 80vh;
+    }
+  }
+  
+  .closeBtn {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 40px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    color: #2c3e50;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    align-self: flex-end;
+  }
+  
