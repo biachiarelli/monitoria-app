@@ -35,8 +35,8 @@ const Schedules = () => {
   ]
 
   let personalSchedule = [
-    { day: 'segunda',  hour: '09:00', status: true, person: 'Maria Silva' }, 
-    { day: 'segunda',  hour: '09:30', status: true, person: 'Maria Silva' }, 
+    { day: 'segunda',  hour: '09:00', status: true, person: 'Matheus Campos' }, 
+    { day: 'segunda',  hour: '09:30', status: true, person: 'Matheus Campos' }, 
     { day: 'segunda',  hour: '10:00', status: null, person: '' }, 
     { day: 'segunda',  hour: '10:30', status: null, person: '' }, 
     { day: 'segunda',  hour: '11:00', status: null, person: '' }, 
@@ -94,8 +94,8 @@ const Schedules = () => {
     { day: 'terça',  hour: '22:30', status: null, person: '' }, 
 
     
-    { day: 'quarta',  hour: '09:00', status: true, person: 'Maria Silva' }, 
-    { day: 'quarta',  hour: '09:30', status: true, person: 'Maria Silva' }, 
+    { day: 'quarta',  hour: '09:00', status: true, person: 'Matheus Campos' }, 
+    { day: 'quarta',  hour: '09:30', status: true, person: 'Matheus Campos' }, 
     { day: 'quarta',  hour: '10:00', status: null, person: '' }, 
     { day: 'quarta',  hour: '10:30', status: null, person: '' }, 
     { day: 'quarta',  hour: '11:00', status: null, person: '' }, 
@@ -153,8 +153,8 @@ const Schedules = () => {
     { day: 'quinta',  hour: '22:30', status: null, person: '' }, 
 
     
-    { day: 'sexta',  hour: '09:00', status: true, person: 'Maria Silva' }, 
-    { day: 'sexta',  hour: '09:30', status: true, person: 'Maria Silva' }, 
+    { day: 'sexta',  hour: '09:00', status: false, person: '' }, 
+    { day: 'sexta',  hour: '09:30', status: false, person: '' }, 
     { day: 'sexta',  hour: '10:00', status: null, person: '' }, 
     { day: 'sexta',  hour: '10:30', status: null, person: '' }, 
     { day: 'sexta',  hour: '11:00', status: null, person: '' }, 
@@ -183,8 +183,8 @@ const Schedules = () => {
     { day: 'sexta',  hour: '22:30', status: null, person: '' }, 
 
     
-    { day: 'sábado',  hour: '09:00', status: null, person: 'Maria Silva' }, 
-    { day: 'sábado',  hour: '09:30', status: null, person: 'Maria Silva' }, 
+    { day: 'sábado',  hour: '09:00', status: null, person: 'Matheus Campos' }, 
+    { day: 'sábado',  hour: '09:30', status: null, person: 'Matheus Campos' }, 
     { day: 'sábado',  hour: '10:00', status: null, person: '' }, 
     { day: 'sábado',  hour: '10:30', status: null, person: '' }, 
     { day: 'sábado',  hour: '11:00', status: null, person: '' }, 
@@ -231,7 +231,7 @@ const Schedules = () => {
   return (
     <GridTemplate>
         <div className="Schedules">
-          <h1 className="Schedules-title"> Meus horários disponíveis</h1>
+          <h1 className="Schedules-title"> Calendário de monitoria</h1>
             <div className="Schedules-label">
                <h2 className="Schedules-label__text">Clique para marcar como disponível/indisponível</h2>
                <div className="Schedules-label__itens">

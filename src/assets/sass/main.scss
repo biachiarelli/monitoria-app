@@ -10,12 +10,16 @@
 @import "../../components/Navbar/navbar.scss"; 
 @import "../../components/GridTemplate/grid-template"; 
 @import "../../components/GridTemplate/grid-template"; 
+@import "../../components/CardSchedule/card-schedule"; 
+@import "../../components/Monitor/monitor"; 
+@import "../../components/Modal/modal"; 
 
 //page
-@import "../../pages/Login/login.scss"; 
+@import     "../../pages/Login/login.scss"; 
 @import "../../pages/RegisterStudant/register-studant.scss"; 
 @import "../../pages/RegisterMonitor/register-monitor.scss"; 
 @import "../../pages/Home/home.scss"; 
+@import "../../pages/HomeEmpty/home-empty.scss"; 
 @import "../../pages/Schedules/schedules.scss"; 
 @import "../../pages/SearchMonitor/search-monitor.scss"; 
 @import "../../pages/Preferences/preferences.scss"; 

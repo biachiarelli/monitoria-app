@@ -1,6 +1,6 @@
 .Profile {
     display: flex;
-    grid: 32px;
+    gap: 32px;
     flex-direction: column;
     
     &-title {
@@ -21,7 +21,7 @@
     }
 
     &-img {
-        width: 320px;
+        width: 160px;
     }
 
     &-info {

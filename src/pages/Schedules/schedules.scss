@@ -100,8 +100,11 @@
             display: flex;
         }
 
-        td, span {
+        td {
             width: 172px;
+        }
+
+        span {
             align-items: center;
             justify-content: center;
             font-size: 14px;
