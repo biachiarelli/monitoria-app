@@ -11,7 +11,7 @@ const Input = (props) => {
               </select>
             }
             { props.options == null && 
-            <input type={props.type} placeholder={props.placeholder} required={props.required} />
+            <input type={props.type} placeholder={props.placeholder} required={props.required} name={props.name} id={props.id} />
             }
             <span className="Input-message">{props.mesage}</span>
       </div>
