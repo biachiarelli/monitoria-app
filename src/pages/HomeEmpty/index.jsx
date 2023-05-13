@@ -13,14 +13,21 @@ const HomeEmpty = () => {
     <GridTemplate>
         <div className="Home-empty">
           <h1 className="Home-empty-title"> <span  className="bold">Olá,</span> {info.name}</h1>
-          <h2 className="Home-empty-subtitle">Veja seu calendário de monitorias ou busque monitores</h2>
+          <h2 className="Home-empty-subtitle">Acesso rápido as funcionalidades do sistema:</h2>
         </div>
         <div className="Home-empty-options">
-          <div className="Home-empty-options__card color"  onClick={() => navigate("/calendario")}>
+          <div className="Home-empty-options__card color"  onClick={() => navigate("/minhas-monitorias")}>
+            <span className="bold">Minhas</span> monitorias
+          </div>
+          
+          <div className="Home-empty-options__card"  onClick={() => navigate("/calendario")}>
             <span className="bold">Calendário</span> de monitoria
           </div>
           <div className="Home-empty-options__card"  onClick={() => navigate("/monitores")}>
-            <span className="bold">Buscar</span> horários de monitores
+            <span className="bold">Buscar</span> monitores
+          </div>
+          <div className="Home-empty-options__card"  onClick={() => navigate("/preferencias")}>
+            <span className="bold">Prefências</span> de recomendação
           </div>
         </div>
     </GridTemplate>
