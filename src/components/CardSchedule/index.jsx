@@ -35,7 +35,7 @@ export default function CardSchedule() {
   }
 
   function excluir(id) {
-    console.log(id)
+    console.log("Excluir id:"+id);
   }
 
   return (
@@ -63,7 +63,7 @@ export default function CardSchedule() {
               id="centered-toggle-button"
               onClick={() => setIsOpen(true)}
               />
-              <Button buttonStyle="secondary" label="Excluir monitoria" onClick={excluir(item.id)} />
+              <Button buttonStyle="secondary" label="Excluir monitoria" onClick={()=>excluir(item.id)} />
           </div>
         </div>
         ))}
