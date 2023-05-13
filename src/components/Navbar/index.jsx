@@ -17,6 +17,19 @@ const Navbar = (props) => {
     }
   }
 
+  function isActive(label) {
+    const pathname = window.location.pathname;
+    let r = false;
+
+    props.menu.forEach(item => {
+      if(item.link === pathname && item.label === label){
+        r = true
+      }
+    });
+
+    return r;
+  }
+
   return (
     <div className={`Navbar ${showMenuMobile ? "showMenu" : ""}`}>
       <div className='Navbar-mobile' >
@@ -29,7 +42,7 @@ const Navbar = (props) => {
         <div className='Navbar-menu'>
             
           {props.menu.map((item, index) => (
-            <div key={index} className='Navbar-menu__item' onClick={() => navigate(item.link)} >
+            <div key={index} className={`Navbar-menu__item ${isActive(item.label) ? "active" : ""}`} onClick={() => navigate(item.link)} >
                 {item.label}
             </div>
           ))}
