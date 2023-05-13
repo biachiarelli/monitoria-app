@@ -10,7 +10,7 @@
     @include max-md {
         background: transparent;
         position: absolute;
-        z-index: 1;
+        z-index: 0;
     }
 
     &-container {

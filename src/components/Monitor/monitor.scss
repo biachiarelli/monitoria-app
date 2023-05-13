@@ -1,8 +1,7 @@
 .Monitor {
     display: flex;
     flex-direction: column;
-    padding: 16px;
-    gap: 56px;
+    gap: 48px;
     width: 72vw;    
 
     @include max-md {
