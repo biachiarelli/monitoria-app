@@ -45,6 +45,7 @@
         right: 0;
         text-align: center;
         display: none;
+        width: 40px;
 
         @include max-md {
             display: block;

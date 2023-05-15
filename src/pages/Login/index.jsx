@@ -15,7 +15,7 @@ import Alert from '../../components/Alert';
   const [typeMessage, setTypeMessage] = useState("");
 
   const handleSubmit = async e => {
-     navigate("/minhas-monitorias");
+     navigate("/");
   }
 
   return (

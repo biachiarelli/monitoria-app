@@ -17,6 +17,11 @@
     .card-info {
         display: flex;
         gap: 32px;
+
+        @include max-md {
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 
     .card-buttons {
@@ -25,6 +30,7 @@
 
         @include max-md {
             flex-direction: column;
+            gap: 16px;
         }
 
     }

@@ -7,20 +7,35 @@
         gap: 56px;
         background: $white;
         box-shadow: 0px 4px 28px rgba(171, 171, 171, 0.25);
+
+        @include max-md {
+            padding: 16px;
+            gap: 32px;
+        }
     }
 
     .card-img {
-        height: 140px;
+        width: 140px;
     }
 
     .card-info {
         display: flex;
         gap: 32px;
+        
+        @include max-md {
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 
     .card-buttons {
         display: flex;
         gap: 24px;
+
+        @include max-md {
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 
     .card-info__text {
