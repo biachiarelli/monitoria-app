@@ -39,6 +39,14 @@
             border-radius: 100%;
             z-index: 1;
 
+
+            @include max-md {
+                font-size: 18px;
+                line-height: 32px;
+                width: 32px;
+                height: 32px;
+            }
+
         }
 
         &__label {

@@ -4,13 +4,14 @@
 
     
     &.showMenu {
-        background-color: $white;
+        background-color: $white;    
+        box-shadow: 12px 4px 28px rgba(171, 171, 171, 0.45);
     }
 
     @include max-md {
         background: transparent;
         position: absolute;
-        z-index: 0;
+        z-index: 1;
     }
 
     &-container {
@@ -48,6 +49,11 @@
 
         img {
             width: 40px;
+
+            
+            @include max-md {
+                width: 32px;
+            }
         }
     }
 

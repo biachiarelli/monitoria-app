@@ -11,7 +11,7 @@
 
         @include max-sm {
             grid-template-columns: auto;
-            padding: 60px 16px 0;
+            padding: 40px 16px 0;
         }
     }
 
@@ -20,6 +20,11 @@
         font-size: 32px;       
         color: $gray-4;
         margin: 0;
+
+        
+        @include max-md {
+            font-size: 24px;  
+        }
     }
 
     &-logo {
@@ -104,6 +109,7 @@
         grid-gap: 24px;
 
         @include max-sm {
+            flex-direction: column;
             grid-gap: 12px;
         }
     }

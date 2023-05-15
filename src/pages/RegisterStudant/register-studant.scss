@@ -7,7 +7,7 @@
         min-height: 94vh;
 
         @include max-sm {
-            padding: 60px 16px 0;
+            padding: 40px 16px 0;
         }
     }
 
@@ -22,7 +22,7 @@
 
         &__icon {
             color: $primary-color;
-            font-size: 24px;
+            font-size: 40px;
             cursor: pointer;
         }
 
@@ -73,6 +73,11 @@
 
         img {
             width: 100%;
+            max-width: 360px;
+
+            @include max-lg {
+            max-width: 100%;
+            }
         }
     }
 
@@ -85,6 +90,7 @@
 
         @include max-lg {
             grid-template-columns: auto;
+            grid-row-gap: 8px;
         }
     }
 
@@ -96,6 +102,7 @@
 
         @include max-md {
             gap: 16px;
+            flex-direction: column;
         }
     }
 

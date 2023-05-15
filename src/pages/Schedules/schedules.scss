@@ -33,8 +33,7 @@
             grid-gap: 24px;
             
             @include max-sm {
-                flex-direction: column;
-                gap: 2px;
+                gap: 8px;
             }
         }
 

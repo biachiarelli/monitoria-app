@@ -28,10 +28,12 @@ const Profile = () => {
               <span className="Profile-info__subject">{data.subject} {data.class}</span>
               <span className="Profile-info__email">{data.email}</span>
             </div>
+            { /* 
             <div className="Profile-buttons">
               <Button label="Editar perfil"  buttonStyle="primary" onClick={() => navigate("")} />
               <Button label="Alterar senha" buttonStyle="secondary" onClick={() => navigate("")}/>
             </div>
+            */}
         </div>
       </div>
     </GridTemplate>
