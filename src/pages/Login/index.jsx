@@ -41,7 +41,7 @@ import Alert from '../../components/Alert';
                 required={true}
                 onChange={e => setSenha(e.target.value)}
                 />
-                <span className='Login-link'>Esqueci minha senha</span>
+                {/* <span className='Login-link'>Esqueci minha senha</span> */}
               </div>
               
               <Button type="submit" label="Entrar" buttonStyle="primary" />
@@ -49,8 +49,8 @@ import Alert from '../../components/Alert';
           <div className="Login-footer">
             <div className="Login-text-line"><hr />Primeiro acesso?<hr /></div>
             <div className="Login-buttons">
-              <Button label="Sou aluno"  buttonStyle="primary" onClick={() => navigate("/cadastro-aluno")} />
-              <Button label="Sou monitor" buttonStyle="secondary" onClick={() => navigate("/cadastro-aluno")}/>
+              <Button label="Cadastro de aluno"  buttonStyle="secondary" onClick={() => navigate("/cadastro-aluno")} />
+              {/*<Button label="Sou monitor" buttonStyle="primary" onClick={() => navigate("/cadastro-aluno")}/> */}
             </div>
           </div>
         </div>
