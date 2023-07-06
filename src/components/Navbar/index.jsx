@@ -37,7 +37,7 @@ const Navbar = (props) => {
       </div>
       <div className={`Navbar-container ${showMenuMobile ? "showMenu" : ""}`} >
         <div className='Navbar-img'>
-          <img src={img} alt="Logo Recomendação Monitoria" onClick={() => navigate("/")} />
+          <img src={img} alt="Logo Recomendação Monitoria" onClick={() => navigate("/home")} />
         </div>
         <div className='Navbar-menu'>
             

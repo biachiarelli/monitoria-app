@@ -1,10 +1,7 @@
 import GridTemplate from "../../components/GridTemplate";
 import profileImg from '../../assets/img/profile.png';
-import { useNavigate } from 'react-router-dom';
-import Button from "../../components/Button";
 
 const Profile = () => {
-  const navigate = useNavigate();
 
   const data = {
     img: profileImg,

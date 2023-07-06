@@ -49,7 +49,6 @@
 
         img {
             width: 40px;
-
             
             @include max-md {
                 width: 32px;
@@ -62,6 +61,7 @@
 
         img {
             width: 100%;
+            cursor: pointer;
         }
 
         @include max-md {

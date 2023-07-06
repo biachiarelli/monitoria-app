@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <div className='Header'>
       <div className='Header-logo'>
-        <img src={img} alt="Logo recomendação monitoria" onClick={() => navigate("/")} />
+        <img src={img} alt="Logo recomendação monitoria" onClick={() => navigate("/home")} />
       </div>
         <div className='Header-info'  onClick={() => navigate('/perfil')} >
             <span>{props.info.name}</span>

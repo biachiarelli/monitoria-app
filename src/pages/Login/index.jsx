@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Alert from '../../components/Alert';
 
- export default function Login({ setToken }) {
+ export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
@@ -15,7 +15,7 @@ import Alert from '../../components/Alert';
   const [typeMessage, setTypeMessage] = useState("");
 
   const handleSubmit = async e => {
-     navigate("/");
+     navigate("/home");
   }
 
   return (
