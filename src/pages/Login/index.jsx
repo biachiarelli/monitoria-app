@@ -8,14 +8,14 @@ import Alert from '../../components/Alert';
 
  export default function Login({ setToken }) {
   const navigate = useNavigate();
-  //const [email, setEmail] = useState();
-  //const [senha, setSenha] = useState();
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
   const [alert, setAlert] = useState(false);
   const [messageAlert, setMessageAlert] = useState("");
   const [typeMessage, setTypeMessage] = useState("");
 
   const handleSubmit = async e => {
-     navigate("/"); 
+     navigate("/");
   }
 
   return (
