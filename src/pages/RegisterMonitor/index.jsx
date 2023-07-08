@@ -24,6 +24,7 @@ const RegisterMonitor = () => {
 
   function submit() {
     console.log("submit")
+    navigate("/entrar")
   }
 
   useEffect(() => {
